@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    overflow-x: hidden;
+}
+
+.section {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home {
+    background: whitesmoke;
+    padding: 132px 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+}
+
+.text,
+.visual {
+    width: 50%;
+}
+
+.text {
+    margin: 0 20px;
+}
+
+.primary {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tertiary {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.visual img {
+    display: block;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+}
+
+#home .text {
+    margin-left: 30px;
+}
+
+#home .visual img {
+    margin-left: auto;
+}
+
+.btn {
+    padding: 14px 20px;
+    background: #FC8019;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    display: inline-block;
+    margin: 20px 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.03);
+}

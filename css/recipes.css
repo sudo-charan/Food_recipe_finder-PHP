@@ -1,0 +1,146 @@
+    @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Madimi+One&display=swap');
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .container {
+        position: relative;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .background-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../imgs/hero-banner-large.jpg');
+        background-size: cover;
+        background-position: bottom;
+        /* opacity: 0.90; */
+    }
+
+    .content {
+        margin-left: 0%;
+        margin-top: 8%;
+        height: 30%;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 33px;
+        font-family: "Slackside One", cursive;
+        color: #ff8800;
+        margin-top: 12%;
+    }
+
+    .search-box {
+        background-color: #ff8800;
+        width: 29%;
+        height: 40px;
+        margin-left: 35.5%;
+        display: flex;
+        margin-top: 3%;
+    }
+
+    .search-box input {
+        padding: 0 20px;
+        width: 87%;
+    }
+
+    .search-box i {
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+
+     /* Add your CSS styles for recipe cards here */
+     .recipe-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .recipe-card {
+        width: calc(25% - 40px); /* 25% width with 20px padding on each side */
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .recipe-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .recipe-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .recipe-image {
+        width: 100%;
+        /* height: 50%; */
+        /* object-fit: cover; */
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .recipe-link {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+
+
+    /* Add your CSS styles for modal popup here */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 5%;
+    top: 0;
+    width: 90%;
+    height: 95%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

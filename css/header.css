@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Indie+Flower&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    height: 10vh;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+nav .logo h2 {
+    font-family: "Akaya Kanadaka", system-ui;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: -10%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 22px;
+    transition: 0.1s;
+    font-family: "Akaya Kanadaka", system-ui;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #fac031;
+}
+
+nav .icon i {
+    font-size: 29px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav .icon i:hover {
+    color: #c09730;
+}
+
+.dropdown {
+    position: absolute;
+    top: 60%;
+    right: 85px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: none;
+    z-index: 100;
+    box-shadow: #00000069 0 0 10px;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+    background-color: #fac13192;
+}

@@ -15,7 +15,6 @@
 <body>
     <nav>
         <div class="logo">
-            <!-- <img src="image/logo.png"> -->
             <h2>Recipe Saga</h2>
         </div>
 

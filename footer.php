@@ -1,5 +1,5 @@
 <?php
-ob_start();  // Start output buffering
+ob_start(); 
 
 // Enable error reporting
 ini_set('display_errors', 1);
@@ -34,8 +34,8 @@ if(isset($_POST['g-name']) && isset($_POST['g-email']) && isset($_POST['g-msg'])
     $stmt->close();  // Close the prepared statement
     $db->close();    // Close the database connection
 
-    ob_end_flush();  // Flush the output buffer
-    exit(); // Stop further execution of the script after handling the form submission
+    ob_end_flush();
+    exit();
 }
 ?>
 
@@ -80,7 +80,7 @@ if(isset($_POST['g-name']) && isset($_POST['g-email']) && isset($_POST['g-msg'])
                 </form>
             </div>
         </div>
-        <div class='cr-con'>Copyright &copy; 2024 | Made by Raj | Shattu | Charan</div>
+        <div class='cr-con'>Copyright &copy; 2024 | Made by Charanraj | Shatananda | Charan</div>
     </footer>
 
     <script>

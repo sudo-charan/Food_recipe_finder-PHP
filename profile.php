@@ -10,7 +10,7 @@ if (!isset($_SESSION['Username'])) {
 
 // Retrieve user information from the session
 $username = $_SESSION['Username'];
-$email = $_SESSION['Email']; // Assuming Email is stored in the session as well
+$email = $_SESSION['Email'];
 
 ?>
 
@@ -111,7 +111,6 @@ $email = $_SESSION['Email']; // Assuming Email is stored in the session as well
 
     <script>
         function logout() {
-            // Perform logout action here, such as redirecting to logout page or clearing session/local storage
             alert("Logout successful!");
             window.location.href = "signin.html";
         }

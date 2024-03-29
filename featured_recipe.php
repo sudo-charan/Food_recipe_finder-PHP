@@ -32,7 +32,6 @@ $recipes_result = $db->query($recipes_query);
             font-family: Arial, sans-serif;
         }
 
-        /* Recipe Section CSS */
         .recipe {
             width: 100%;
             padding: 50px 0;
@@ -77,12 +76,12 @@ $recipes_result = $db->query($recipes_query);
         }
 
         .card .content {
-            height: 150px; /* Fixed height for content */
+            height: 150px;
             padding: 15px;
             background-color: #edf2f4;
             color: black;
             text-align: left;
-            overflow-y: auto; /* Add scroll bar */
+            overflow-y: auto; /* to scroll bar */
         }
 
         .card h3 {
@@ -106,7 +105,6 @@ $recipes_result = $db->query($recipes_query);
             <?php 
             if($recipes_result->num_rows > 0) {
                 while($row = $recipes_result->fetch_assoc()) {
-                    // Construct the correct image path
                     $image_path = './admin/uploads/' . $row['image'];
                     
                     echo '<div class="card">';

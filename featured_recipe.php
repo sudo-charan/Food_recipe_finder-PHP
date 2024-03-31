@@ -19,83 +19,8 @@ $recipes_result = $db->query($recipes_query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Featured Recipes</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Indie+Flower&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .recipe {
-            width: 100%;
-            padding: 50px 0;
-            background-color: #f5f5f5;
-        }
-
-        .recipe h2 {
-            color: #383838;
-            font-size: 40px;
-            text-transform: capitalize;
-            margin-bottom: 20px;
-            text-align: center;
-            font-family: "Akaya Kanadaka", system-ui;
-        }
-
-        .box {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .card {
-            width: 300px;
-            height: 400px;
-            margin: 10px;
-            border: 1px solid #9e8961;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-            background-color: #edf2f4;
-        }
-
-        .card:hover {
-            transform: scale(1.03);
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card .content {
-            height: 150px;
-            padding: 15px;
-            background-color: #edf2f4;
-            color: black;
-            text-align: left;
-            overflow-y: auto; /* to scroll bar */
-        }
-
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #213032;
-        }
-
-        .card p {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/featured_recipes.css">
 </head>
 
 <body>

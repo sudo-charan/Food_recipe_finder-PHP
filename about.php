@@ -12,7 +12,7 @@
     <div class="content-box"  id="About">
         <h1>About Us</h1>
         <div class="main-box">
-            <img src="./imgs/aboutus.jpg" />
+            <img src="./imgs/aboutus.jpg" alt="about us image"/>
             <p>
                 Welcome to our recipe website, where culinary inspiration meets delicious creations! Whether you're a
                 seasoned chef or a passionate home cook, we are here to ignite your taste buds and guide you on a

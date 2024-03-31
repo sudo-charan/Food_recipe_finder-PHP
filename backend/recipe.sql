@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2024 at 08:01 PM
+-- Generation Time: Mar 31, 2024 at 07:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -60,10 +60,14 @@ CREATE TABLE `featured_recipes` (
 --
 
 INSERT INTO `featured_recipes` (`id`, `recipe_name`, `description`, `image`) VALUES
-(1, 'Dosa', 'Ingredients: - 1 cup rice - 1/4 cup urad dal (black gram dal) - Salt to taste Instructions: 1. Soak rice and urad dal separately for 4-5 hours. 2. Grind them to a smooth batter separately. 3. Mix both batters, add salt and let it ferment overnight. 4. Heat a non-stick pan, pour a ladleful of batter, spread it thin, and cook until golden brown. Serve hot with chutney and sambar.\r\n\r\n', '660438b87664a_OIG.jpg'),
-(3, 'Idli', 'Ingredients: - 1 cup rice - 1/4 cup urad dal (black gram dal) - Salt to taste Instructions: 1. Soak rice and urad dal separately for 4-5 hours. 2. Grind them to a smooth batter separately. 3. Mix both batters, add salt and let it ferment overnight. 4. Heat a non-stick pan, pour a ladleful of batter, spread it thin, and cook until golden brown. Serve hot with chutney and sambar.\r\n\r\n', '6604395114fb1_unnamed.jpg'),
-(4, 'samosa', 'Ingredients: - 1 cup rice - 1/4 cup urad dal (black gram dal) - Salt to taste Instructions: 1. Soak rice and urad dal separately for 4-5 hours. 2. Grind them to a smooth batter separately. 3. Mix both batters, add salt and let it ferment overnight. 4. Heat a non-stick pan, pour a ladleful of batter, spread it thin, and cook until golden brown. Serve hot with chutney and sambar.\r\n\r\n', '660439627b429_ritsugit.jpeg'),
-(5, 'Maggie', 'Ingredients: - 1 cup rice - 1/4 cup urad dal (black gram dal) - Salt to taste Instructions: 1. Soak rice and urad dal separately for 4-5 hours. 2. Grind them to a smooth batter separately. 3. Mix both batters, add salt and let it ferment overnight. 4. Heat a non-stick pan, pour a ladleful of batter, spread it thin, and cook until golden brown. Serve hot with chutney and sambar.\r\n\r\n', '66043976239e1_narutogit.png');
+(10, 'Chicken Chettinad', '   - Ingredients:\r\n     - 500g chicken pieces\r\n     - 2 onions, finely chopped\r\n     - 3 tomatoes, pureed\r\n     - 2 tsp ginger-garlic paste\r\n     - 2 tbsp Chettinad masala\r\n     - 1 tsp turmeric powder\r\n     - Salt to taste\r\n     - Oil for cooking\r\n\r\n   - Instructions:\r\n     1. Heat oil in a pan, add onions, and sauté until golden.\r\n     2. Add ginger-garlic paste, tomato puree, Chettinad masala, turmeric, and salt. Cook for 5 minutes.\r\n     3. Add chicken pieces, mix well, cover, and cook until chicken is tender.\r\n     4. Garnish with coriander leaves and serve hot.', '6605abad2b607_Chicken Chettinad.jpeg'),
+(11, 'Hyderabadi Biryani', '   - Ingredients:\r\n     - 500g basmati rice\r\n     - 500g chicken/mutton, marinated\r\n     - 4 onions, thinly sliced\r\n     - 2 tomatoes, chopped\r\n     - 2 tbsp biryani masala\r\n     - 1 cup yogurt\r\n     - 1 tsp turmeric powder\r\n     - Oil/ghee for cooking\r\n     - Salt to taste\r\n\r\n   - Instructions:\r\n     1. Cook rice until 70% done, drain, and keep aside.\r\n     2. In a pan, heat oil/ghee, sauté onions until golden. Add tomatoes, biryani masala, turmeric, and salt.\r\n     3. Add marinated chicken/mutton and cook until half done.\r\n     4. Layer cooked rice over the meat mixture. Sprinkle saffron milk and cover with a lid.\r\n     5. Cook on low heat for 20 minutes. Serve hot with raita.', '6605abf8e7273_Hyderabadi Biryani.jpeg'),
+(12, 'Andhra Fish Curry', '   - Ingredients:\r\n     - 500g fish pieces\r\n     - 1 onion, finely chopped\r\n     - 2 tomatoes, chopped\r\n     - 2 tbsp tamarind paste\r\n     - 3-4 green chillies, slit\r\n     - 1 tsp mustard seeds\r\n     - 1 tsp fenugreek seeds\r\n     - 1 tsp red chilli powder\r\n     - Salt to taste\r\n     - Oil for cooking\r\n\r\n   - Instructions:\r\n     1. Heat oil in a pan, add mustard seeds, fenugreek seeds, and let them splutter.\r\n     2. Add onions, green chillies, and sauté until onions turn translucent.\r\n     3. Add tomatoes, tamarind paste, red chilli powder, and salt. Cook until tomatoes are soft.\r\n     4. Add fish pieces, mix gently, cover, and cook until fish is done.\r\n     5. Garnish with coriander leaves and serve hot with rice.', '6605ac958d2b9_Andhra Fish Curry.jpeg'),
+(13, 'Kerala Fish Moilee', '   - Ingredients:\r\n     - 500g fish fillets\r\n     - 1 onion, finely chopped\r\n     - 2 green chillies, slit\r\n     - 1 cup thick coconut milk\r\n     - 1 tsp ginger-garlic paste\r\n     - 1 tsp turmeric powder\r\n     - 1 tsp mustard seeds\r\n     - 2-3 curry leaves\r\n     - Salt to taste\r\n     - Oil for cooking\r\n\r\n   - Instructions:\r\n     1. Heat oil in a pan, add mustard seeds, curry leaves, and let them splutter.\r\n     2. Add onions, green chillies, and sauté until onions are translucent.\r\n     3. Add ginger-garlic paste, turmeric powder, and salt. Cook for 2 minutes.\r\n     4. Add fish fillets and coconut milk. Simmer until fish is cooked.\r\n     5. Serve hot with steamed rice.', '6605ad1ee64ab_Kerala Fish Moilee.jpeg'),
+(14, 'Mangalorean Prawn Curry', '   - Ingredients:\r\n     - 500g prawns, cleaned\r\n     - 1 onion, finely chopped\r\n     - 2 tomatoes, chopped\r\n     - 1 cup coconut milk\r\n     - 2 tbsp red chilli powder\r\n     - 1 tsp turmeric powder\r\n     - 1 tsp mustard seeds\r\n     - 2-3 curry leaves\r\n     - Salt to taste\r\n     - Oil for cooking\r\n\r\n   - Instructions:\r\n     1. Heat oil in a pan, add mustard seeds, curry leaves, and let them splutter.\r\n     2. Add onions and sauté until golden. Add tomatoes and cook until soft.\r\n     3. Add red chilli powder, turmeric, and salt. Stir well.\r\n     4. Add prawns and coconut milk. Cook until prawns are done.\r\n     5. Garnish with coriander leaves and serve with rice or roti.', '6605b16abcdf7_Mangalorean Prawn Curry.jpeg'),
+(15, 'Butter Chicken', '   - Ingredients:\r\n     - 500g chicken pieces\r\n     - 2 onions, finely chopped\r\n     - 2 tomatoes, pureed\r\n     - 1 cup yogurt\r\n     - 2 tbsp butter\r\n     - 1 tbsp ginger-garlic paste\r\n     - 1 tsp red chilli powder\r\n     - 1 tsp garam masala\r\n     - 1 tsp kasuri methi (dried fenugreek leaves)\r\n     - Salt to taste\r\n     - Oil for cooking\r\n\r\n   - Instructions:\r\n     1. Marinate chicken with yogurt, red chilli powder, and salt for 1 hour.\r\n     2. Heat oil in a pan, add onions and sauté until golden. Add ginger-garlic paste and sauté for 2 minutes.\r\n     3. Add tomato puree, garam masala, and salt. Cook until oil separates.\r\n     4. Add marinated chicken and cook until chicken is tender.\r\n     5. Add butter and kasuri methi. Simmer for 5 minutes.\r\n     6. Serve hot with naan or rice.', '6605b235c7527_Butter Chicken.jpeg'),
+(18, 'Strawberry Milkshake', '   - Ingredients:\r\n     - 2 cups strawberry ice cream\r\n     - 1 cup milk\r\n     - 1 cup fresh strawberries\r\n     - 2 tbsp sugar (optional)\r\n   \r\n   - Instructions:\r\n     - Blend all ingredients until smooth.\r\n     - Serve chilled with a strawberry garnish.', '6606c82953242_Strawberry Milkshake.jpeg'),
+(19, 'Mango Milkshake', '   - Ingredients:\r\n     - 2 ripe mangoes, peeled and diced\r\n     - 2 cups vanilla ice cream\r\n     - 1 cup milk\r\n     - 2 tbsp sugar (optional)\r\n   \r\n   - Instructions:\r\n     - Blend mangoes, ice cream, milk, and sugar until smooth.\r\n     - Serve chilled.', '6606c8723fd38_Mango Milkshake.jpeg');
 
 -- --------------------------------------------------------
 
@@ -84,7 +88,8 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `name`, `email`, `message`, `created_at`) VALUES
-(27, 'raj', 'example@gmail.com', 'Hey im user of your website. I really likes your recipes and also your website designs. Love your works.', '2024-03-27 18:48:25');
+(27, 'raj', 'example@gmail.com', 'Hey im user of your website. I really likes your recipes and also your website designs. Love your works.', '2024-03-27 18:48:25'),
+(31, 'Charan', 'charanofficial30@gmail.com', '⭐️⭐️⭐️⭐️☆ (4/5)\n\nI recently stumbled upon RecipeHeaven.com while searching for some new dinner ideas, and I must say, I was pleasantly surprised! The website boasts an extensive collection of recipes ranging from quick weeknight dinners to gourmet desserts.', '2024-03-29 14:30:49');
 
 -- --------------------------------------------------------
 
@@ -171,19 +176,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `featured_recipes`
 --
 ALTER TABLE `featured_recipes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

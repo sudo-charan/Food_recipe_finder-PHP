@@ -1,32 +1,25 @@
 <?php 
 include("admin_nav.php");
 
-// Making connection to the database
+// Establish connection to the database
 $db = new mysqli("localhost", "root", "", "recipe");
 
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
 
-// Counting total users
+// Count total users
 $query_users = "SELECT COUNT(*) as total_users FROM users";
 $result_users = $db->query($query_users);
-$row_users = $result_users->fetch_assoc();
-$total_users = $row_users['total_users'];
 
-// Check if recipes table exists
-// $query_check_table = "SHOW TABLES LIKE 'recipes'";
-// $result_check_table = $db->query($query_check_table);
+if ($result_users && $result_users->num_rows > 0) {
+    $row_users = $result_users->fetch_assoc();
+    $total_users = $row_users['total_users'];
+} else {
+    $total_users = 0;
+}
 
-// if($result_check_table->num_rows > 0) {
-//     $query_recipes = "SELECT COUNT(*) as total_recipes FROM recipes";
-//     $result_recipes = $db->query($query_recipes);
-//     $row_recipes = $result_recipes->fetch_assoc();
-//     $total_recipes = $row_recipes['total_recipes'];
-// } else {
-//     $total_recipes = 0;
-// }
-
+// Close the database connection
 $db->close();
 ?>
 

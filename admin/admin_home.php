@@ -1,25 +1,19 @@
 <?php 
 include("admin_nav.php");
 
-// Establish connection to the database
+// Making connection to the database
 $db = new mysqli("localhost", "root", "", "recipe");
 
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
 
-// Count total users
+// Counting total users
 $query_users = "SELECT COUNT(*) as total_users FROM users";
 $result_users = $db->query($query_users);
+$row_users = $result_users->fetch_assoc();
+$total_users = $row_users['total_users'];
 
-if ($result_users && $result_users->num_rows > 0) {
-    $row_users = $result_users->fetch_assoc();
-    $total_users = $row_users['total_users'];
-} else {
-    $total_users = 0;
-}
-
-// Close the database connection
 $db->close();
 ?>
 

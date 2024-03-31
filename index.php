@@ -1,9 +1,15 @@
 <?php
+    // Start the session
     session_start();
-    if(!isset($_SESSION['Username'])) {
+
+    // Check if the user is not logged in
+    if (!isset($_SESSION['Username'])) {
+        // Redirect to the sign-in page
         header("Location: signin.html");
         exit();
     }
+
+    // Include the header
     include("header.php");
 ?>
 
@@ -17,11 +23,16 @@
 <body>
     
 <?php 
+    // Include various sections of the webpage
     include("home.php");
     include("categories.php");
     include("featured_recipe.php");
     include("about.php");
 ?>
-<?php include("footer.php"); ?>
+
+<?php 
+    // Include the footer
+    include("footer.php"); 
+?>
 </body>
 </html>

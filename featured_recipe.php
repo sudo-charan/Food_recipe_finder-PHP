@@ -28,15 +28,17 @@ $recipes_result = $db->query($recipes_query);
         <h2>Featured Recipes</h2>
         <div class="box">
             <?php 
-            if($recipes_result->num_rows > 0) {
+            if($recipes_result && $recipes_result->num_rows > 0) {
                 while($row = $recipes_result->fetch_assoc()) {
-                    $image_path = './admin/uploads/' . $row['image'];
+                    $image_path = './admin/uploads/' . htmlspecialchars($row['image']);
+                    $recipe_name = htmlspecialchars($row['recipe_name']);
+                    $description = htmlspecialchars($row['description']);
                     
                     echo '<div class="card">';
-                    echo '<img src="' . $image_path . '" alt="' . $row['recipe_name'] . '">';
+                    echo '<img src="' . $image_path . '" alt="' . $recipe_name . '">';
                     echo '<div class="content">';
-                    echo '<h3>' . $row['recipe_name'] . '</h3>';
-                    echo '<p>' . $row['description'] . '</p>';
+                    echo '<h3>' . $recipe_name . '</h3>';
+                    echo '<p>' . $description . '</p>';
                     echo '</div>';
                     echo '</div>';                    
                 }

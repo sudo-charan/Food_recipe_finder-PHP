@@ -14,20 +14,15 @@ $result_messages = $db->query($query_messages);
 
 // Delete message if delete button is clicked
 if(isset($_GET['delete_id'])) {
-    $delete_id = intval($_GET['delete_id']);  // Convert to integer to prevent SQL injection
-    $delete_query = "DELETE FROM messages WHERE id = ?";
-    $stmt = $db->prepare($delete_query);
-    $stmt->bind_param("i", $delete_id);
-    
-    if($stmt->execute()) {
+    $delete_id = $_GET['delete_id'];
+    $delete_query = "DELETE FROM messages WHERE id = $delete_id";
+    if($db->query($delete_query)) {
         header("Location: messages.php"); //If success.. refresh the page to redirect messages list
-        exit();
     } else {
         echo "Error deleting message: " . $db->error;
     }
 }
 
-$stmt->close();
 ?>
 
 <!DOCTYPE html>
@@ -47,14 +42,10 @@ $stmt->close();
             <?php 
             if($result_messages->num_rows > 0) {
                 while($row = $result_messages->fetch_assoc()) {
-                    $name = htmlspecialchars($row['name']);
-                    $email = htmlspecialchars($row['email']);
-                    $message = htmlspecialchars($row['message']);
-                    
                     echo "<div class='message-item'>";
-                    echo "<strong>Name:</strong> " . $name . "<br>";
-                    echo "<strong>Email:</strong> " . $email . "<br>";
-                    echo "<strong>Message:</strong> " . $message . "<br>";
+                    echo "<strong>Name:</strong> " . $row['name'] . "<br>";
+                    echo "<strong>Email:</strong> " . $row['email'] . "<br>";
+                    echo "<strong>Message:</strong> " . $row['message'] . "<br>";
                     echo "<a href='messages.php?delete_id=" . $row['id'] . "' class='delete-button'>Delete</a>";
                     echo "</div>";
                 }

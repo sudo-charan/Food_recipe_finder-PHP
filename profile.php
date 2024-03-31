@@ -2,15 +2,28 @@
 session_start();
 
 // Check if the user is logged in
-if (!isset($_SESSION['Username'])) {
+if (!isset($_SESSION['Username']) || !isset($_SESSION['Email'])) {
     // Redirect to the sign-in page if not logged in
     header("Location: signin.html");
     exit(); 
 }
 
-// Retrieve user information from the session
-$username = $_SESSION['Username'];
-$email = $_SESSION['Email'];
+// Retrieve user information from the session and sanitize
+$username = htmlspecialchars($_SESSION['Username'], ENT_QUOTES, 'UTF-8');
+$email = htmlspecialchars($_SESSION['Email'], ENT_QUOTES, 'UTF-8');
+
+// Function to securely logout the user
+function logout() {
+    // Unset all session variables
+    $_SESSION = array();
+
+    // Destroy the session
+    session_destroy();
+
+    // Redirect to the sign-in page
+    header("Location: signin.html");
+    exit();
+}
 
 ?>
 
@@ -42,7 +55,6 @@ $email = $_SESSION['Email'];
             text-shadow: #212529 0 0 2.5px;
             font-family: Papyrus, fantasy;        
         }
-
 
         .container {
             max-width: 490px;
@@ -111,8 +123,10 @@ $email = $_SESSION['Email'];
 
     <script>
         function logout() {
-            alert("Logout successful!");
-            window.location.href = "signin.html";
+            if (confirm("Are you sure you want to logout?")) {
+                alert("Logout successful!");
+                window.location.href = "signin.html";
+            }
         }
     </script>
 </body>

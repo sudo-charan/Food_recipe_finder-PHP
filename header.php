@@ -10,8 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Style sheet link -->
     <link rel="stylesheet" href="./css/header.css">
-</head>
 
+</head>
 <body>
     <nav>
         <div class="logo">
@@ -27,20 +27,20 @@
         </ul>
 
         <div class="icon">
-            <i class="material-symbols-outlined" id="accountIcon">account_circle</i>
-            <div class="dropdown" id="accountDropdown">
-                <?php
-                    // Check if user is logged in
-                    if(isset($_SESSION['Username'])) {
-                        echo '<a href="profile.php">Profile</a>'; // Profile link
-                        echo '<a href="logout.php">Logout</a>'; // Logout link
-                    } else {
-                        echo '<a href="signin.html">Login</a>'; // Login link
-                        echo '<a href="signup.html">Register</a>'; // Register link
-                    }
-                ?>
-            </div>
+        <i class="material-symbols-outlined" id="accountIcon">account_circle</i>
+        <div class="dropdown" id="accountDropdown">
+            <?php
+                // Check if user is logged in
+                if(isset($_SESSION['Username'])) {
+                    echo '<a href="profile.php">Profile</a>'; // Profile link
+                    echo '<a href="logout.php">Logout</a>'; // Logout link
+                } else {
+                    echo '<a href="signin.html">Login</a>'; // Login link
+                    echo '<a href="signup.html">Register</a>'; // Register link
+                }
+            ?>
         </div>
+    </div>
     </nav>
 
     <script>
@@ -49,7 +49,11 @@
             var dropdown = document.getElementById('accountDropdown');
 
             icon.addEventListener('click', function () {
-                dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+                if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                    dropdown.style.display = 'block';
+                } else {
+                    dropdown.style.display = 'none';
+                }
             });
 
             window.addEventListener('click', function (e) {
@@ -57,6 +61,7 @@
                     dropdown.style.display = 'none';
                 }
             });
+            
         });
     </script>
 </body>

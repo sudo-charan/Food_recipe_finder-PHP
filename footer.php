@@ -13,10 +13,10 @@ if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
 
-if(isset($_POST['g-name']) && isset($_POST['g-email']) && isset($_POST['g-msg'])) {
-    $name = $_POST['g-name'];
-    $email = $_POST['g-email'];
-    $message = $_POST['g-msg'];
+if(isset($_POST['g-name'], $_POST['g-email'], $_POST['g-msg'])) {
+    $name = htmlspecialchars($_POST['g-name']);
+    $email = filter_var($_POST['g-email'], FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars($_POST['g-msg']);
 
     // Prepare the SQL statement
     $stmt = $db->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
@@ -28,7 +28,7 @@ if(isset($_POST['g-name']) && isset($_POST['g-email']) && isset($_POST['g-msg'])
     if($stmt->execute()) {
         echo json_encode(["status" => "success"]);
     } else {
-        echo json_encode(["status" => "error", "message" => $stmt->error]);
+        echo json_encode(["status" => "error", "message" => "Failed to send message."]);
     }
     
     $stmt->close();  // Close the prepared statement
@@ -139,4 +139,5 @@ if(isset($_POST['g-name']) && isset($_POST['g-email']) && isset($_POST['g-msg'])
             });
         });
     </script>
-
+</body>
+</html>

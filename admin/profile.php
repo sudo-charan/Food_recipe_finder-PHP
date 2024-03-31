@@ -1,6 +1,5 @@
-<?php include("admin_nav.php") ?>
-
 <?php 
+include("admin_nav.php");
 session_start();
 
 // Check if the user is an admin
@@ -26,11 +25,11 @@ $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $admin_name = $row['username'];
-    $admin_email = $row['email'];
+    $admin_name = htmlspecialchars($row['username']);
+    $admin_email = htmlspecialchars($row['email']);
 } else {
-    echo '<script>alert("Admin details not found");
-    window.location.href = "../signin.html";</script>';
+    echo '<script>alert("Admin details not found");';
+    echo 'window.location.href = "../signin.html";</script>';
     exit();
 }
 
@@ -46,7 +45,6 @@ $db->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Profile</title>
     <link rel="stylesheet" href="./css/profile.css">
-
 </head>
 
 <body>

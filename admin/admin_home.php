@@ -29,6 +29,7 @@ $db->close();
 </head>
 
 <body>
+    <div class ="bgimg">
     <section class="content">
         <h2 class="dashboard-title">Admin Dashboard</h2>
 
@@ -57,6 +58,7 @@ $db->close();
             </div>
         </div>
     </section>
+    </div>
 </body>
 
 </html>

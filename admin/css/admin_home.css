@@ -2,23 +2,30 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #000000;
+}
+
+.bgimg {
+    background: url(../imgs/view-waffles-with-blueberries.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .content {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the top */
+    align-items: flex-start;
     height: 100vh;
-    margin-left: 210px; /* Add margin to content */
-    padding-top: 60px; /* Adjust padding to account for the title position */
+    margin-left: 210px;
+    padding-top: 60px;
 }
 
 .dashboard-title {
     position: absolute;
     top: 20px;
-    left: 15%;
-    color: #333;
+    left: 21.5%;
+    color: #ffffff;
     font-size: 24px;
     font-weight: 700;
 }
@@ -30,7 +37,8 @@ body {
     padding: 40px;
     width: 80%;
     max-width: 1000px;
-    margin-top: 40px; /* Adjusted margin to account for the title position */
+    margin-top: 40px;
+    opacity:  .9;
 }
 
 .metrics {

@@ -1,0 +1,9 @@
+**Database Name: recipe**
+
+**admin details**
+name: admin
+password: admin123
+
+**Developed by charanraj | Shatananda | Charan**
+
+**Import this database file to your xampp**

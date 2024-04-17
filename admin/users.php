@@ -46,6 +46,22 @@
                 $query = "SELECT username, email, signup_date, signup_time FROM users";
             }
 
+            // Handle user deletion
+            if(isset($_GET['username'])) {
+                $deleteUsername = $_GET['username'];
+                $deleteQuery = "DELETE FROM users WHERE username = ?";
+                $stmt = $db->prepare($deleteQuery);
+                $stmt->bind_param("s", $deleteUsername);
+                if($stmt->execute()) {
+                    echo '<script>alert("User deleted successfully");
+                    window.location.href = "users.php";</script>';
+                } else {
+                    echo '<script>alert("Error deleting user");
+                    window.location.href = "users.php";</script>';
+                }
+                $stmt->close();
+            }
+
             $result = $db->query($query);
             
             if ($result->num_rows > 0) {

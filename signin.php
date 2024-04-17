@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if(isset($_POST['admin-login'])) {
                 header("Location: admin/admin_home.php"); // Redirect admin to admin_home.php
             } else {
-                header("Location: index.php"); // Redirect regular user to index.php
+                header("Location: index.html"); // Redirect regular user to index.php
             }
             exit();
         } else {
@@ -48,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<script>alert("User not found");
         window.location.href = "signin.html";</script>';
     }
+    
     $stmt->close();
 }
 $db->close();
